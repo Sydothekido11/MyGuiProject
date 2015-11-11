@@ -4,7 +4,7 @@ import javax.swing.JFrame;
 import mygui.controller.GUIController;
 
 
-public class MyGUIFrame
+public class MyGUIFrame extends JFrame
 {
 
 	private GUIController baseController;
@@ -24,22 +24,6 @@ public class MyGUIFrame
 		this.setSize(400,400);
 		this.setVisible(true);
 	}
-
-
-	private void setContentPane(MyGUIPanel basePanel)
-	{}
-	
-	private void setTitle(String string)
-	{}
-	
-	private void setSize(int i, int j)
-	{}
-	
-	private void setVisible(boolean b)
-	{}
-	
-
-	
 
 	
 

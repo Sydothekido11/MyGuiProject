@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 
-public class MyGUIPanel
+ public class MyGUIPanel extends JPanel
 {
 
 	private GUIController baseController;
@@ -21,8 +21,9 @@ public class MyGUIPanel
 	{
 		this.baseController = baseController;
 		baseLayout = new SpringLayout();
-		firstButton = new JButton("Press this to recieve a gift");
+		firstButton = new JButton("Press this to receive a gift");
 		firstTextField = new JTextField("Say something fool.");
+		
 		
 		setupPanel();
 		setupLayout();
@@ -39,7 +40,10 @@ public class MyGUIPanel
 
 	private void setupLayout()
 	{
-		
+		baseLayout.putConstraint(SpringLayout.WEST, firstButton, 94, SpringLayout.WEST, this);
+		baseLayout.putConstraint(SpringLayout.SOUTH, firstButton, -114, SpringLayout.SOUTH, this);
+	baseLayout.putConstraint(SpringLayout.WEST, firstTextField, 126, SpringLayout.WEST, this);
+		baseLayout.putConstraint(SpringLayout.SOUTH, firstTextField, -46, SpringLayout.NORTH, firstButton);
 	}
 	
 	private void setupListeners()
@@ -53,12 +57,5 @@ public class MyGUIPanel
 		});
 	}
 	
-	
-	private void add(JTextField firstTextField)
-	{}
-	private void add(JButton firstButton)
-	{}
-	private void setLayout(SpringLayout baseLayout)
-	{}
 
 }
